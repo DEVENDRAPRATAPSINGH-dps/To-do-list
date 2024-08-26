@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.container{
+    width: 100%;
+    
+    min-height: 100vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+.todobox{
+    
+    max-width: 540px;
+    width: 100%;
+    background: #fff;
+    margin-top: 100px;
+    margin-bottom: 500px;
+    padding-bottom:20px ;
+    border-radius: 30px;
+    
+    
+
+    
+}
+h2{
+    padding: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+   
+}
+.checklist{
+    height: 30px;
+    width: 30px;
+    
+}
+
+#text{
+    width: 100px;
+    padding: 2px;
+    margin-bottom: 100px;
+    height: 20px;
+    width: 470px;
+    border: 1px solid grey;
+    border-color: grey;
+    border-radius: 50px;
+    padding: 10px;
+    height: 20px;
+    margin-left: 23px;
+    position: relative;
+    cursor: text;
+    
+}
+
+.button{
+    color: white;
+    background-color: orangered;
+    border-radius: 50px;
+    width: 70px;
+    padding: 10px;
+    margin-left: -70px;
+    position: absolute;
+    height: 42px;
+    cursor: pointer;
+
+
+}
+ul {
+    list-style: none;
+    margin-top: -86px;
+    margin-left: 50px;
+}
+ul li{
+    position: relative;
+    padding: 5px;
+    user-select: none;
+    
+
+}
+ul li::before{
+    position: absolute;
+    content: ''; 
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(svgs/unchecked.svg);
+    background-size: cover;
+    bottom: 3.5px;
+    left: -20px;
+    
+
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(svgs/checked.svg);
+    background-color: orange;
+}
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color: #555;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background: #edeef0;
+}
+
+@media (max-width: 600px){
+    .container{
+        height: auto;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .todobox{
+        padding:10px;
+
+    }
+}
+@media (max-width : 515px){
+    .container{
+        width: fit-content;
+        
+        height: 100%;
+
+
+    }
+    .todobox{
+        padding: 10px;
+    }
+}
+
